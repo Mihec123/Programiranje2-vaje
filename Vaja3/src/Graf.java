@@ -24,9 +24,9 @@ public class Graf {
 		return jePovezava;
 	}
 
-	public void dodajTocko(Tocka a){
-		if(!tocke.containsKey(a.ime)){
-			this.tocke.put(a.ime, a);
+	public void dodajTocko(Tocka b){
+		if(!tocke.containsKey(b.ime)){
+			this.tocke.put(b.ime, b);
 		}
 
 	}
