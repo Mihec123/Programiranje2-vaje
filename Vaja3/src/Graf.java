@@ -24,9 +24,9 @@ public class Graf {
 		return jePovezava;
 	}
 
-	public void dodajTocko(Object a){
-		if(!tocke.containsKey(a)){
-			this.tocke.put(a, new Tocka(a));
+	public void dodajTocko(Tocka a){
+		if(!tocke.containsKey(a.ime)){
+			this.tocke.put(a.ime, a);
 		}
 
 	}
@@ -74,7 +74,6 @@ public class Graf {
 		Graf poln = Graf.prazen(n);
 		for(int i = 0; i < n; i++){
 			for(int j = 0; j < i; j++){
-				System.out.println(poln.tocka(i));
 				poln.dodajPovezavo(poln.tocka(i), poln.tocka(j));	
 			}
 
