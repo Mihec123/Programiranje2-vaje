@@ -74,6 +74,7 @@ public class Graf {
 		Graf poln = Graf.prazen(n);
 		for(int i = 0; i < n; i++){
 			for(int j = 0; j < i; j++){
+				System.out.println(poln.tocka(i));
 				poln.dodajPovezavo(poln.tocka(i), poln.tocka(j));	
 			}
 
@@ -104,6 +105,16 @@ public class Graf {
 		}
 		return povezave.size() == a.tocke.size();
 
+	}
+	public void razporedi(double x, double y, double r){
+		int n = this.tocke.size();
+		int i = 0;
+		for(Tocka t: this.tocke.values()){
+			t.x = r*Math.cos((2*i*Math.PI)/n) + x;
+			t.y = r*Math.sin((2*i*Math.PI)/n)+ y;
+			i ++;
+		}
+		
 	}
 
 
