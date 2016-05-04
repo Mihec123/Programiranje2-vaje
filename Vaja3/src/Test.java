@@ -2,10 +2,7 @@
 public class Test {
 
 	public static void main(String[] args) {
-		Graf test = Graf.cikel(4);
-		for(Tocka a: test.tocke.values()){
-			System.out.println(a.sosedi);
-		}
+		Graf test = Graf.poln(5);
 		test.razporedi(300, 300, 250);
 		Okno okno = new Okno();
 		okno.pack();
